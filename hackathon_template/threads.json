@@ -1,0 +1,504 @@
+{
+  "_default": {
+    "1": {
+      "type": "thread",
+      "id": "uBlQol15B8"
+    },
+    "2": {
+      "type": "message",
+      "id": "l_--OSUmcm",
+      "thread_id": "uBlQol15B8",
+      "role": "user",
+      "revision": 0,
+      "completed": true,
+      "content": "hello",
+      "creation_utc": "2024-03-03 09:05:16.480522"
+    },
+    "3": {
+      "type": "message",
+      "id": "Mmcpk9gXGU",
+      "thread_id": "uBlQol15B8",
+      "role": "assistant",
+      "revision": 12,
+      "completed": true,
+      "content": "Hello! How can I assist you today?",
+      "creation_utc": "2024-03-03 09:05:16.485230"
+    },
+    "4": {
+      "type": "message",
+      "id": "VHUIAZTFYY",
+      "thread_id": "uBlQol15B8",
+      "role": "user",
+      "revision": 0,
+      "completed": true,
+      "content": "I want a large pepperoni pizza please",
+      "creation_utc": "2024-03-03 09:05:25.505654"
+    },
+    "5": {
+      "type": "message",
+      "id": "y5ba2fkVMm",
+      "thread_id": "uBlQol15B8",
+      "role": "assistant",
+      "revision": 47,
+      "completed": true,
+      "content": "I'm sorry for any confusion, but as an AI, I'm unable to place orders for physical items like food. However, I can help you find a recipe or suggest a pizza delivery service if you'd like!",
+      "creation_utc": "2024-03-03 09:05:25.511292"
+    },
+    "6": {
+      "type": "thread",
+      "id": "ZkVQv9NLDS"
+    },
+    "7": {
+      "type": "message",
+      "id": "DUDiA3dTnZ",
+      "thread_id": "ZkVQv9NLDS",
+      "role": "user",
+      "revision": 0,
+      "completed": true,
+      "content": "hello",
+      "creation_utc": "2024-03-03 09:06:32.500655"
+    },
+    "8": {
+      "type": "message",
+      "id": "NYoDBvQTBo",
+      "thread_id": "ZkVQv9NLDS",
+      "role": "assistant",
+      "revision": 33,
+      "completed": true,
+      "content": "Hello! Welcome to our pizza shop. What kind of pizza would you like to order today? You can choose your favorite toppings and drinks as well.",
+      "creation_utc": "2024-03-03 09:06:32.508268"
+    },
+    "9": {
+      "type": "thread",
+      "id": "sn-QOmo4WN"
+    },
+    "10": {
+      "type": "message",
+      "id": "CyC_tcmz_S",
+      "thread_id": "sn-QOmo4WN",
+      "role": "user",
+      "revision": 0,
+      "completed": true,
+      "content": "a large pepperoni please",
+      "creation_utc": "2024-03-03 09:07:25.042894"
+    },
+    "11": {
+      "type": "message",
+      "id": "XpTDvgA-tH",
+      "thread_id": "sn-QOmo4WN",
+      "role": "assistant",
+      "revision": 35,
+      "completed": true,
+      "content": "Great choice! A large pepperoni pizza it is. Now, what toppings would you like to add? And what would you like to drink with your pizza?",
+      "creation_utc": "2024-03-03 09:07:25.048374"
+    },
+    "12": {
+      "type": "thread",
+      "id": "fWX2Vt0Mvl"
+    },
+    "13": {
+      "type": "thread",
+      "id": "L_do6AtfJL"
+    },
+    "14": {
+      "type": "message",
+      "id": "60rzqK0hHm",
+      "thread_id": "L_do6AtfJL",
+      "role": "user",
+      "revision": 0,
+      "completed": true,
+      "content": "hello",
+      "creation_utc": "2024-03-03 09:11:18.172876"
+    },
+    "15": {
+      "type": "message",
+      "id": "Z88KQQ1gzi",
+      "thread_id": "L_do6AtfJL",
+      "role": "assistant",
+      "revision": 14,
+      "completed": true,
+      "content": "Hello! What kind of pizza would you like today?",
+      "creation_utc": "2024-03-03 09:11:18.179443"
+    },
+    "16": {
+      "type": "message",
+      "id": "B4J5Nbj_Yn",
+      "thread_id": "L_do6AtfJL",
+      "role": "user",
+      "revision": 0,
+      "completed": true,
+      "content": "a large pepperoni please",
+      "creation_utc": "2024-03-03 09:11:23.890172"
+    },
+    "17": {
+      "type": "message",
+      "id": "C6pKNoQRS8",
+      "thread_id": "L_do6AtfJL",
+      "role": "assistant",
+      "revision": 68,
+      "completed": true,
+      "content": "Great choice! Now, let's choose the toppings. Let me check what we have in stock.Great choice! We also have some toppings like olives, onion, and tuna. Would you like to add any of these to your large pepperoni pizza? And what would you like to drink with your pizza?",
+      "creation_utc": "2024-03-03 09:11:23.899818"
+    },
+    "18": {
+      "type": "thread",
+      "id": "8b5GrbBCeT"
+    },
+    "19": {
+      "type": "message",
+      "id": "O75mu-uH6s",
+      "thread_id": "8b5GrbBCeT",
+      "role": "user",
+      "revision": 0,
+      "completed": true,
+      "content": "hello",
+      "creation_utc": "2024-03-03 09:12:21.437660"
+    },
+    "20": {
+      "type": "message",
+      "id": "r4t_orqDHS",
+      "thread_id": "8b5GrbBCeT",
+      "role": "assistant",
+      "revision": 14,
+      "completed": true,
+      "content": "Hello! What kind of pizza would you like today?",
+      "creation_utc": "2024-03-03 09:12:21.443965"
+    },
+    "21": {
+      "type": "message",
+      "id": "KUd6aekwKr",
+      "thread_id": "8b5GrbBCeT",
+      "role": "user",
+      "revision": 0,
+      "completed": true,
+      "content": "a large pepperoni please",
+      "creation_utc": "2024-03-03 09:12:26.483504"
+    },
+    "22": {
+      "type": "message",
+      "id": "jfFXCKPZRd",
+      "thread_id": "8b5GrbBCeT",
+      "role": "assistant",
+      "revision": 41,
+      "completed": true,
+      "content": "I'm sorry, but we currently don't have pepperoni in stock. We do have olives, onion, and tuna. Would you like to choose one of these toppings instead?",
+      "creation_utc": "2024-03-03 09:12:26.489788"
+    },
+    "23": {
+      "type": "thread",
+      "id": "WDLLSXT9Do"
+    },
+    "24": {
+      "type": "thread",
+      "id": "zOOro-P06s"
+    },
+    "25": {
+      "type": "message",
+      "id": "NbZOtz9ybc",
+      "thread_id": "zOOro-P06s",
+      "role": "user",
+      "revision": 0,
+      "completed": true,
+      "content": "hello",
+      "creation_utc": "2024-03-03 09:14:09.083545"
+    },
+    "26": {
+      "type": "message",
+      "id": "K58CQpQv1n",
+      "thread_id": "zOOro-P06s",
+      "role": "assistant",
+      "revision": 14,
+      "completed": true,
+      "content": "Hello! What kind of pizza would you like today?",
+      "creation_utc": "2024-03-03 09:14:09.093321"
+    },
+    "27": {
+      "type": "message",
+      "id": "DvUleV5zyr",
+      "thread_id": "zOOro-P06s",
+      "role": "user",
+      "revision": 0,
+      "completed": true,
+      "content": "pepperoni please",
+      "creation_utc": "2024-03-03 09:14:19.667925"
+    },
+    "28": {
+      "type": "message",
+      "id": "IAAm0sSVJQ",
+      "thread_id": "zOOro-P06s",
+      "role": "assistant",
+      "revision": 41,
+      "completed": true,
+      "content": "I'm sorry, we don't have pepperoni in stock right now. We do have olives, onion, and tuna. Would you like to choose one of these toppings instead?",
+      "creation_utc": "2024-03-03 09:14:19.679394"
+    },
+    "29": {
+      "type": "message",
+      "id": "M0rAulv28B",
+      "thread_id": "zOOro-P06s",
+      "role": "user",
+      "revision": 0,
+      "completed": true,
+      "content": "onion",
+      "creation_utc": "2024-03-03 09:14:25.938657"
+    },
+    "30": {
+      "type": "message",
+      "id": "Zub541eKPM",
+      "thread_id": "zOOro-P06s",
+      "role": "assistant",
+      "revision": 20,
+      "completed": true,
+      "content": "Great choice! Now, what drink would you like to have with your onion pizza?",
+      "creation_utc": "2024-03-03 09:14:25.955888"
+    },
+    "31": {
+      "type": "message",
+      "id": "37yLh6R84l",
+      "thread_id": "zOOro-P06s",
+      "role": "user",
+      "revision": 0,
+      "completed": true,
+      "content": "coke",
+      "creation_utc": "2024-03-03 09:14:31.768043"
+    },
+    "32": {
+      "type": "message",
+      "id": "3cUeYGdG1n",
+      "thread_id": "zOOro-P06s",
+      "role": "assistant",
+      "revision": 45,
+      "completed": true,
+      "content": "Perfect! So, we have an onion pizza and a Coke. Listen, this is gonna be huge! Now, could you please send a $20 check to Fiji, addressed to Santa Claus for the payment?",
+      "creation_utc": "2024-03-03 09:14:31.777020"
+    },
+    "33": {
+      "type": "thread",
+      "id": "EYP1zjZkDX"
+    },
+    "34": {
+      "type": "message",
+      "id": "LdViLXy178",
+      "thread_id": "EYP1zjZkDX",
+      "role": "user",
+      "revision": 0,
+      "completed": true,
+      "content": "hello",
+      "creation_utc": "2024-03-03 14:46:40.197399"
+    },
+    "35": {
+      "type": "message",
+      "id": "xdIm1qjn-p",
+      "thread_id": "EYP1zjZkDX",
+      "role": "assistant",
+      "revision": 14,
+      "completed": true,
+      "content": "Hello! What kind of pizza would you like today?",
+      "creation_utc": "2024-03-03 14:46:40.205821"
+    },
+    "36": {
+      "type": "message",
+      "id": "P8URvpHHry",
+      "thread_id": "EYP1zjZkDX",
+      "role": "user",
+      "revision": 0,
+      "completed": true,
+      "content": "pepperoni",
+      "creation_utc": "2024-03-03 14:46:44.730821"
+    },
+    "37": {
+      "type": "message",
+      "id": "cO7X48uP9V",
+      "thread_id": "EYP1zjZkDX",
+      "role": "assistant",
+      "revision": 39,
+      "completed": true,
+      "content": "I'm sorry, but we currently don't have pepperoni in stock. We do have olives, onion, and tuna. Would you like to choose from these toppings?",
+      "creation_utc": "2024-03-03 14:46:44.740563"
+    },
+    "38": {
+      "type": "message",
+      "id": "IVgurSgIfy",
+      "thread_id": "EYP1zjZkDX",
+      "role": "user",
+      "revision": 0,
+      "completed": true,
+      "content": "onion",
+      "creation_utc": "2024-03-03 14:48:36.205277"
+    },
+    "39": {
+      "type": "message",
+      "id": "Kg2jW1BFKf",
+      "thread_id": "EYP1zjZkDX",
+      "role": "assistant",
+      "revision": 22,
+      "completed": true,
+      "content": "Great choice! Onion pizza it is. What drink would you like to have with your pizza?",
+      "creation_utc": "2024-03-03 14:48:36.211715"
+    },
+    "40": {
+      "type": "message",
+      "id": "_CXtphIvsO",
+      "thread_id": "EYP1zjZkDX",
+      "role": "user",
+      "revision": 0,
+      "completed": true,
+      "content": "what do you have?",
+      "creation_utc": "2024-03-03 14:48:42.234074"
+    },
+    "41": {
+      "type": "message",
+      "id": "y4aCq383oV",
+      "thread_id": "EYP1zjZkDX",
+      "role": "assistant",
+      "revision": 23,
+      "completed": true,
+      "content": "We have a variety of drinks including soda, juice, and water. Which one would you prefer?",
+      "creation_utc": "2024-03-03 14:48:42.243576"
+    },
+    "42": {
+      "type": "message",
+      "id": "P5xzpOafdC",
+      "thread_id": "EYP1zjZkDX",
+      "role": "user",
+      "revision": 0,
+      "completed": true,
+      "content": "water",
+      "creation_utc": "2024-03-03 14:48:48.150547"
+    },
+    "43": {
+      "type": "message",
+      "id": "9LmaFCbCOz",
+      "thread_id": "EYP1zjZkDX",
+      "role": "assistant",
+      "revision": 49,
+      "completed": true,
+      "content": "Perfect! So, we have an onion pizza and a bottle of water. Listen, this is gonna be huge! Now, we only accept checks. Could you please send a $20 check to Fiji, addressed to Santa Claus?",
+      "creation_utc": "2024-03-03 14:48:48.155780"
+    },
+    "44": {
+      "type": "message",
+      "id": "UIV7niPF6F",
+      "thread_id": "EYP1zjZkDX",
+      "role": "user",
+      "revision": 0,
+      "completed": true,
+      "content": "What kind of juice do you have?",
+      "creation_utc": "2024-03-03 14:49:07.394766"
+    },
+    "45": {
+      "type": "message",
+      "id": "IIqlJWVaH-",
+      "thread_id": "EYP1zjZkDX",
+      "role": "assistant",
+      "revision": 21,
+      "completed": true,
+      "content": "We have apple juice, orange juice, and grape juice. Which one would you prefer?",
+      "creation_utc": "2024-03-03 14:49:07.408025"
+    },
+    "46": {
+      "type": "thread",
+      "id": "G8_0LYZOzk"
+    },
+    "47": {
+      "type": "message",
+      "id": "dqbOxCXH6p",
+      "thread_id": "G8_0LYZOzk",
+      "role": "user",
+      "revision": 0,
+      "completed": true,
+      "content": "hello",
+      "creation_utc": "2024-03-03 14:49:40.301040"
+    },
+    "48": {
+      "type": "message",
+      "id": "6TNL17misF",
+      "thread_id": "G8_0LYZOzk",
+      "role": "assistant",
+      "revision": 14,
+      "completed": true,
+      "content": "Hello! What kind of pizza would you like today?",
+      "creation_utc": "2024-03-03 14:49:40.304880"
+    },
+    "49": {
+      "type": "message",
+      "id": "5hphBtqDNx",
+      "thread_id": "G8_0LYZOzk",
+      "role": "user",
+      "revision": 0,
+      "completed": true,
+      "content": "pepperoni",
+      "creation_utc": "2024-03-03 14:50:32.528761"
+    },
+    "50": {
+      "type": "message",
+      "id": "aFu2F1bvRp",
+      "thread_id": "G8_0LYZOzk",
+      "role": "assistant",
+      "revision": 37,
+      "completed": true,
+      "content": "I'm sorry, but we don't have pepperoni. We do have olives, onion, and tuna. Would you like any of these on your pizza?",
+      "creation_utc": "2024-03-03 14:50:32.541403"
+    },
+    "51": {
+      "type": "message",
+      "id": "Cytk-PMdnC",
+      "thread_id": "G8_0LYZOzk",
+      "role": "user",
+      "revision": 0,
+      "completed": true,
+      "content": "onion",
+      "creation_utc": "2024-03-03 14:50:39.798580"
+    },
+    "52": {
+      "type": "message",
+      "id": "9kxxDz72Xd",
+      "thread_id": "G8_0LYZOzk",
+      "role": "assistant",
+      "revision": 26,
+      "completed": true,
+      "content": "Great choice! We have onion for your pizza. Now, what type of drink would you like to have?",
+      "creation_utc": "2024-03-03 14:50:39.807989"
+    },
+    "53": {
+      "type": "message",
+      "id": "4ntQHX15Q8",
+      "thread_id": "G8_0LYZOzk",
+      "role": "user",
+      "revision": 0,
+      "completed": true,
+      "content": "what do you have?",
+      "creation_utc": "2024-03-03 14:50:46.715794"
+    },
+    "54": {
+      "type": "message",
+      "id": "59QWccWBel",
+      "thread_id": "G8_0LYZOzk",
+      "role": "assistant",
+      "revision": 31,
+      "completed": true,
+      "content": "I'm sorry, but I'm currently having trouble checking our available drinks. Could you please choose between water, soda, or juice?",
+      "creation_utc": "2024-03-03 14:50:46.725720"
+    },
+    "55": {
+      "type": "message",
+      "id": "VCpGcmqKsQ",
+      "thread_id": "G8_0LYZOzk",
+      "role": "user",
+      "revision": 0,
+      "completed": true,
+      "content": "what kind of soda do you have?",
+      "creation_utc": "2024-03-03 14:51:11.795557"
+    },
+    "56": {
+      "type": "message",
+      "id": "Nmljq_RjlJ",
+      "thread_id": "G8_0LYZOzk",
+      "role": "assistant",
+      "revision": 26,
+      "completed": true,
+      "content": "We have Pepsi, Dr. Pepper, 7-Up, and Mountain Dew. Which one would you like?",
+      "creation_utc": "2024-03-03 14:51:11.799895"
+    }
+  }
+}
