@@ -49,8 +49,8 @@ const createChatHandler = (socket) =>
 const newMessageHandler = (socket) =>
     async ({userId, orgId, message}) => {
         const chatId = `${userId}-${orgId}`;
-        const chatObjectStringify = await redis.get(chatId);
-        const chatObject = JSON.parse(chatObjectStringify);
+
+        const chatObject = JSON.parse(await redis.get(chatId));
 
         await addMessage(chatObject, chatId, USER, message);
 
