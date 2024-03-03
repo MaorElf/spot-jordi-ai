@@ -1,25 +1,20 @@
-import express from "express";
+import http from "http";
 import { Server as SocketServer } from "socket.io";
-import cors from 'cors'
 import redis from './redis.js';
 
-// App setup
-const PORT = 5000;
-const app = express();
-const JORDI = 'jordi'
-const USER = 'user'
+const JORDI = 'jordi';
+const USER = 'user';
 
-const server = app.listen(PORT, () => console.info(`Listening on port ${PORT}...`));
+const server = http.createServer();
 
-// Static files
-app.use(cors());
-
-// Socket setup
 const io = new SocketServer(server, {
     cors: {
         origin: '*',
     }
 });
+
+const PORT = 5000;
+server.listen(PORT, () => console.info(`Listening on port ${PORT}...`));
 
 io.on("connection", (socket) => {
     console.log("new socket connection: ", socket.id);
@@ -65,25 +60,6 @@ io.on("connection", (socket) => {
 io.on("disconnect", (socket) => {
     console.log("socket disconnect");
 });
-
-
-app.get('/hello', (req, res) => {
-    res.send('hello')
-})
-
-app.get('/redis/:roomId', async (req, res) => {
-    const roomId = req.params.roomId;
-    const roomObject = await redis.get(roomId)
-    res.json(roomObject)
-
-})
-
-app.get('/redis/init/:roomId', async (req, res) => {
-    const roomId = req.params.roomId;
-    await redis.set(roomId, null);
-    res.end()
-})
-
 
 const addMessage = (chatObject, chatId, sender, message) => {
     chatObject.messages.push({ sender, message });
