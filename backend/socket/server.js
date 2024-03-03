@@ -19,16 +19,16 @@ server.listen(PORT, () => console.info(`Listening on port ${PORT}...`));
 io.on("connection", (socket) => {
     console.log("new socket connection: ", socket.id);
 
-    socket.on('createChat', () => createChatHandler(socket));
-    socket.on('newMessage', () => newMessageHandler(socket));
+    socket.on('createChat', ({userId, orgId}) => createChatHandler(socket, userId, orgId));
+    socket.on('newMessage', ({userId, orgId, message}) => newMessageHandler(socket, userId, orgId, message));
 });
 
 io.on("disconnect", (socket) => {
     console.log(`socket: ${socket.id} disconnect`);
 });
 
-const createChatHandler = (socket) =>
-    async ({userId, orgId}) => {
+const createChatHandler = async (socket, userId, orgId) =>
+    {
         const chatId = `${userId}-${orgId}`;
 
         socket.join(chatId);
@@ -46,8 +46,8 @@ const createChatHandler = (socket) =>
         socket.emit('createChat', chatObject);
     };
 
-const newMessageHandler = (socket) =>
-    async ({userId, orgId, message}) => {
+const newMessageHandler = async (socket, userId, orgId, message) =>
+    {
         const chatId = `${userId}-${orgId}`;
 
         const chatObject = JSON.parse(await redis.get(chatId));
