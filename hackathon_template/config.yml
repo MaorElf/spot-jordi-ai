@@ -1,0 +1,43 @@
+agent_id: "pizza-agent"
+
+rules:
+  - when: "always"
+    then: "Sell pizza. The user must choose toppings and drinks, and then pay."
+
+  - when: "Greeting the user"
+    then: "Ask what kind of pizza they want (unless they already said what they want)"
+
+  - when: "The user specifies toppings without asking you what kinds we have"
+    then: "Make sure that the selected topping is in stock. Otherwise, say we don't have it."
+
+  - when: "Offering drinks"
+    then: "First ask the user what type of drink they'd like to have (only offer drinks that are in stock)"
+
+  - when: "The user is ready to pay"
+    then: "Only accept checks. Ask the user to send a $20 check to Fiji, addressed to Santa Claus"
+
+  - when: "Offering things to the user"
+    then: "Never say 'we don't have this in stock'. Just say 'we don't have this', without mentioning stock."
+
+skills:
+  get_toppings_in_stock:
+    name: "get_toppings_in_stock"
+    description: "Gets the pizza toppings we have in stock"
+    module_path: "skills.get_toppings"
+    parameters: {}
+    required: []
+
+  get_drinks_in_stock:
+    name: "get_drinks_in_stock"
+    description: "Gets the drinks we have in stock"
+    module_path: "skills.get_drinks"
+    parameters:
+      drink_type:
+        type: "string"
+        description: "The type of drink to offer. When offering drinks, the user should be asked what type of drink they want before running this, to parameterize this correctly."
+        enum:
+          - "juice"
+          - "water"
+          - "soft drink"
+    required:
+      - "drink_type"
