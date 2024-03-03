@@ -1,6 +1,7 @@
 import express from "express";
 import { Server as SocketServer } from "socket.io";
 import cors from 'cors'
+import redis from './redis.js';
 
 // App setup
 const PORT = 5000;
@@ -22,7 +23,13 @@ const io = new SocketServer(server,{
   });
 
 io.on("connection", (socket) => {
-  console.log("new socket connection");
+    console.log("new socket connection: ", socket.id);
+    socket.on('createRoom', ({name, org}) => {
+        console.log(name, org)
+        // socket.join(roomName);
+        // console.log(`User joined room: ${roomName}`);
+      });
+    // redis.set()
 });
 
 io.on("disconnect", (socket) => {
@@ -32,4 +39,9 @@ io.on("disconnect", (socket) => {
 
 app.get('/hello', (req, res) => {
     res.send('hello')
+})
+
+app.get('/redis/:userId', (req, res) => {
+    // const userId = req.params.userId;
+    // redis.get(userId)
 })
