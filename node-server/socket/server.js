@@ -9,10 +9,7 @@ const app = express();
 const JORDI = 'jordi'
 const USER = 'user'
 
-const server = app.listen(PORT, function () {
-    console.log(`Listening on port ${PORT}`);
-    console.log(`http://localhost:${PORT}`);
-});
+const server = app.listen(PORT, () => console.info(`Listening on port ${PORT}...`));
 
 // Static files
 app.use(cors());
@@ -32,14 +29,14 @@ io.on("connection", (socket) => {
 
         socket.join(chatId);
 
-        let chatObject = await redis.get(chatId)
+        let chatObject = await redis.get(chatId);
 
         if (chatObject == null) {
             chatObject = {
                 messages: [],
             }
 
-            await addMessage(chatObject, chatId, JORDI, `welcome ${chatId}!`)
+            await addMessage(chatObject, chatId, JORDI, `welcome ${chatId}!`);
         }
 
         socket.emit('createChat', chatObject);
@@ -50,11 +47,17 @@ io.on("connection", (socket) => {
         const chatObjectStringify = await redis.get(chatId);
         const chatObject = JSON.parse(chatObjectStringify);
 
-        await addMessage(chatObject, chatId, USER, message)
+        await addMessage(chatObject, chatId, USER, message);
         socket.emit('newMessage', chatObject);
 
-        // Run Backend Service
+        // Run Backend logic
 
+        // Get model suggestions
+
+        // Get GPT answer
+
+        // await addMessage(chatObject, chatId, USER, message)
+        // socket.emit('newMessage', chatObject);
 
     })
 });
@@ -83,7 +86,7 @@ app.get('/redis/init/:roomId', async (req, res) => {
 
 
 const addMessage = (chatObject, chatId, sender, message) => {
-    chatObject.messages.push({ sender, message })
+    chatObject.messages.push({ sender, message });
 
     return redis.set(chatId, JSON.stringify(chatObject));
 }
