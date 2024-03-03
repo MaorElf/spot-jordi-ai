@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@import "primeicons/primeicons.css";
+@font-face {
+  font-family: 'Poppins';
+  font-style:  normal;
+  font-weight: 400;
+  src:         url('https://s3.amazonaws.com/spotinst-public/assets/console/fonts/Poppins-Regular.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style:  normal;
+  font-weight: 700;
+  src:         local('Poppins bold'), local('Poppins-bold'), url('https://s3.amazonaws.com/spotinst-public/assets/console/fonts/Poppins-Bold.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style:  normal;
+  font-weight: 600;
+  src:         local('Poppins semi-bold'), local('Poppins-semi-bold'), url('https://s3.amazonaws.com/spotinst-public/assets/console/fonts/Poppins-SemiBold.ttf') format("truetype");
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

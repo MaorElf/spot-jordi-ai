@@ -1,0 +1,27 @@
+<main class="wrapper">
+  <section class="header">
+    <div class="avatar">
+      <img src="assets/images/avatar.svg" alt="">
+    </div>
+    <div class="title">Jordi.ai</div>
+  </section>
+
+  <section class="context">
+    <div>Hello! I’m Jordi,</div>
+    <div>Spot’s AI-powered assistant</div>
+  </section>
+
+  <section class="chat">
+<!--    <div class="chat-bubble">-->
+<!--      <div class="chat-bubble-text">-->
+<!--        <div class="chat-bubble-text-title">How can I help you?</div>-->
+<!--        <div class="chat-bubble-text-description">I can help you with any question you have about Spot</div>-->
+<!--      </div>-->
+<!--    </div>-->
+  </section>
+
+  <section class="chat-input">
+    <input type="text" [formControl]="chatInput" [placeholder]="inputPlaceholder">
+    <p-button icon="pi pi-send" class="p-button-sm" [rounded]="true"></p-button>
+  </section>
+</main>
