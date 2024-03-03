@@ -1,5 +1,5 @@
 import http from "http";
-import { Server as SocketServer } from "socket.io";
+import {Server as SocketServer} from "socket.io";
 import redis from './redis.js';
 
 const JORDI = 'jordi';
@@ -19,7 +19,16 @@ server.listen(PORT, () => console.info(`Listening on port ${PORT}...`));
 io.on("connection", (socket) => {
     console.log("new socket connection: ", socket.id);
 
-    socket.on('createChat', async ({ userId, orgId }) => {
+    socket.on('createChat', () => createChatHandler(socket));
+    socket.on('newMessage', () => newMessageHandler(socket));
+});
+
+io.on("disconnect", (socket) => {
+    console.log(`socket: ${socket.id} disconnect`);
+});
+
+const createChatHandler = (socket) =>
+    async ({userId, orgId}) => {
         const chatId = `${userId}-${orgId}`;
 
         socket.join(chatId);
@@ -35,9 +44,10 @@ io.on("connection", (socket) => {
         }
 
         socket.emit('createChat', chatObject);
-    });
+    };
 
-    socket.on('newMessage', async ({ userId, orgId, message }) => {
+const newMessageHandler = (socket) =>
+    async ({userId, orgId, message}) => {
         const chatId = `${userId}-${orgId}`;
         const chatObjectStringify = await redis.get(chatId);
         const chatObject = JSON.parse(chatObjectStringify);
@@ -54,15 +64,10 @@ io.on("connection", (socket) => {
         // await addMessage(chatObject, chatId, USER, message)
         // socket.emit('newMessage', chatObject);
 
-    })
-});
-
-io.on("disconnect", (socket) => {
-    console.log("socket disconnect");
-});
+    };
 
 const addMessage = (chatObject, chatId, sender, message) => {
-    chatObject.messages.push({ sender, message });
+    chatObject.messages.push({sender, message});
 
     return redis.set(chatId, JSON.stringify(chatObject));
 }
