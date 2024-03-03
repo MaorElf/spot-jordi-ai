@@ -4,9 +4,6 @@ from fastapi.middleware.cors import CORSMiddleware
 import asyncio
 import os
 import yaml
-import sys
-
-sys.path.append(os.getcwd())
 
 from emcie.server import EmcieServer
 from emcie.server.agents import AgentStore, AgentId, Agent
