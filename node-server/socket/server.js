@@ -35,7 +35,7 @@ const createChatHandler = (socket) =>
 
         let chatObject = await redis.get(chatId);
 
-        if (chatObject == null) {
+        if (!chatObject) {
             chatObject = {
                 messages: [],
             }
@@ -53,21 +53,32 @@ const newMessageHandler = (socket) =>
         const chatObject = JSON.parse(chatObjectStringify);
 
         await addMessage(chatObject, chatId, USER, message);
+
         socket.emit('newMessage', chatObject);
 
-        // Run Backend logic
+        const recommendations = await getRecommendations(orgId);
 
-        // Get model suggestions
+        const GPTAnswer = await getGPTAnswer(recommendations);
 
-        // Get GPT answer
+        await addMessage(chatObject, chatId, USER, GPTAnswer);
 
-        // await addMessage(chatObject, chatId, USER, message)
-        // socket.emit('newMessage', chatObject);
-
+        socket.emit('newMessage', chatObject);
     };
 
 const addMessage = (chatObject, chatId, sender, message) => {
     chatObject.messages.push({sender, message});
 
     return redis.set(chatId, JSON.stringify(chatObject));
-}
+};
+
+const getRecommendations = (orgId) => {
+    return ({
+        product1: 1,
+        product2: 2,
+        product3: 3,
+    });
+};
+
+const getGPTAnswer = (recommendations) => {
+    return "This is an answer!";
+};
