@@ -48,3 +48,5 @@ if __name__ == "__main__":
     with open('config.yml') as file:
         config = yaml.safe_load(file)
         asyncio.run(main(config))
+
+
