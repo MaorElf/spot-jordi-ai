@@ -1,6 +1,7 @@
 import http from "http";
 import {Server as SocketServer} from "socket.io";
 import redis from './redis.js';
+import {createThread, createUserMessage} from "./hackathonTemplate.js";
 
 const JORDI = 'jordi';
 const USER = 'user';
@@ -36,8 +37,13 @@ const createChatHandler = async (socket, userId, orgId) =>
         let chatObject = await redis.get(chatId);
 
         if (!chatObject) {
+            const threadId = await createThread();
+
+            console.info(`thread Id: ${threadId}`);
+
             chatObject = {
                 messages: [],
+                threadId
             }
 
             await addMessage(chatObject, chatId, JORDI, `welcome ${chatId}!`);
@@ -56,11 +62,13 @@ const newMessageHandler = async (socket, userId, orgId, message) =>
 
         socket.emit('newMessage', chatObject);
 
-        const recommendations = await getRecommendations(orgId);
+        // const recommendations = await getRecommendations(orgId);
+        //
+        // const GPTAnswer = await getGPTAnswer(recommendations);
 
-        const GPTAnswer = await getGPTAnswer(recommendations);
+        const response = await createUserMessage(chatObject.threadId, message);
 
-        await addMessage(chatObject, chatId, USER, GPTAnswer);
+        await addMessage(chatObject, chatId, USER, response);
 
         socket.emit('newMessage', chatObject);
     };
