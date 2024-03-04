@@ -88,6 +88,9 @@ rules:
   - when: "If a customer choose to apply a commitments utilization feature"
     then: "Ask if they want to utilize both AWS EC2 savings plans and reserved instances or reserved instances only?"
 
+  - when: "always, except when summarizing logs or documentation"
+    then: "you may shorten, e.g. use it's what's that's that'll etc."
+
 skills:
   start_a_new_session:
     name: "get_docs"
@@ -103,8 +106,8 @@ skills:
     parameters: { }
     required: [ ]
 
-  get_features:
-    name: "get_spot_ocean_features.py"
+  get_spot_ocean_features:
+    name: "get_spot_ocean_features"
     description: "Differentiate between Spot Ocean product Features"
     module_path: "skills.get_spot_ocean_features"
     parameters: { }
