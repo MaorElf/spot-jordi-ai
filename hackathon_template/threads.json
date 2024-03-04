@@ -502,87 +502,29 @@
     },
     "57": {
       "type": "thread",
-      "id": "RR_FV5okBd"
+      "id": "Ap63GwjKq2"
     },
     "58": {
-      "type": "message",
-      "id": "lgTv7Q0rNV",
-      "thread_id": "RR_FV5okBd",
-      "role": "user",
-      "revision": 0,
-      "completed": true,
-      "content": "hello how are you",
-      "creation_utc": "2024-03-03 16:44:31.394404"
+      "type": "thread",
+      "id": "2cj9wobg6K"
     },
     "59": {
-      "type": "message",
-      "id": "i_Dej5JndE",
-      "thread_id": "RR_FV5okBd",
-      "role": "assistant",
-      "revision": 22,
-      "completed": true,
-      "content": "Hello! I'm doing great, thank you. What kind of pizza would you like today?",
-      "creation_utc": "2024-03-03 16:44:31.410013"
+      "type": "thread",
+      "id": "ck8mIdcDvj"
     },
     "60": {
-      "type": "message",
-      "id": "XhpyIq9YEH",
-      "thread_id": "RR_FV5okBd",
-      "role": "user",
-      "revision": 0,
-      "completed": true,
-      "content": "pizza with zeytim",
-      "creation_utc": "2024-03-03 16:44:45.563847"
+      "type": "thread",
+      "id": "36MSS19Bof"
     },
     "61": {
       "type": "message",
-      "id": "AGHEvo6Z3H",
-      "thread_id": "RR_FV5okBd",
-      "role": "assistant",
-      "revision": 37,
-      "completed": true,
-      "content": "I'm sorry, but we don't have zeytim. We do have olives, onion, and tuna. Would you like to choose from these toppings?",
-      "creation_utc": "2024-03-03 16:44:45.575414"
-    },
-    "62": {
-      "type": "message",
-      "id": "8gEMlyPAsK",
-      "thread_id": "RR_FV5okBd",
+      "id": "R6FRde59WE",
+      "thread_id": "36MSS19Bof",
       "role": "user",
       "revision": 0,
       "completed": true,
-      "content": "what about pepperoni",
-      "creation_utc": "2024-03-03 16:44:59.119017"
-    },
-    "63": {
-      "type": "message",
-      "id": "ei7_QLGL58",
-      "thread_id": "RR_FV5okBd",
-      "role": "assistant",
-      "revision": 36,
-      "completed": true,
-      "content": "I'm sorry, but we don't have pepperoni. We do have olives, onion, and tuna. Would you like to choose from these toppings?",
-      "creation_utc": "2024-03-03 16:44:59.128840"
-    },
-    "64": {
-      "type": "message",
-      "id": "pugk5i5n5v",
-      "thread_id": "RR_FV5okBd",
-      "role": "user",
-      "revision": 0,
-      "completed": true,
-      "content": "i want with olevs",
-      "creation_utc": "2024-03-03 16:45:19.171611"
-    },
-    "65": {
-      "type": "message",
-      "id": "QQZcVRRuhp",
-      "thread_id": "RR_FV5okBd",
-      "role": "assistant",
-      "revision": 27,
-      "completed": true,
-      "content": "Great choice! We have olives for your pizza. Now, what type of drink would you like to have?",
-      "creation_utc": "2024-03-03 16:45:19.180795"
+      "content": "Sure!",
+      "creation_utc": "2024-03-04 10:29:50.090018"
     }
   }
 }

@@ -1,6 +1,11 @@
 import http from "http";
 import {Server as SocketServer} from "socket.io";
 import redis from './redis.js';
+import {
+    createAgentReaction,
+    createThread,
+    createUserMessage,
+} from "./hackathonTemplate.js";
 
 const JORDI = 'jordi';
 const USER = 'user';
@@ -36,8 +41,11 @@ const createChatHandler = async (socket, userId, orgId) =>
         let chatObject = await redis.get(chatId);
 
         if (!chatObject) {
+            const threadId = await createThread();
+
             chatObject = {
                 messages: [],
+                threadId
             }
 
             await addMessage(chatObject, chatId, JORDI, `welcome ${chatId}!`);
@@ -56,11 +64,11 @@ const newMessageHandler = async (socket, userId, orgId, message) =>
 
         socket.emit('newMessage', chatObject);
 
-        const recommendations = await getRecommendations(orgId);
-
-        const GPTAnswer = await getGPTAnswer(recommendations);
-
-        await addMessage(chatObject, chatId, USER, GPTAnswer);
+        const messageId = await createUserMessage(chatObject.threadId, message);
+        
+        const jordiMessage = await createAgentReaction(messageId, chatObject.threadId)
+        
+        await addMessage(chatObject, chatId, JORDI, jordiMessage);
 
         socket.emit('newMessage', chatObject);
     };
@@ -71,14 +79,3 @@ const addMessage = (chatObject, chatId, sender, message) => {
     return redis.set(chatId, JSON.stringify(chatObject));
 };
 
-const getRecommendations = (orgId) => {
-    return ({
-        product1: 1,
-        product2: 2,
-        product3: 3,
-    });
-};
-
-const getGPTAnswer = (recommendations) => {
-    return "This is an answer!";
-};
