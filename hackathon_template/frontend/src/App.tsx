@@ -70,7 +70,7 @@ const useStore = create<ChatStore>(set => ({
 }));
 
 const SERVER_ADDRESS = "http://localhost:8000";
-const AGENT_ID = "pizza-agent";
+const AGENT_ID = "spot-agent";
 
 async function createThread() {
   const data = await fetch(SERVER_ADDRESS + "/threads", {
