@@ -68,7 +68,7 @@ const newMessageHandler = async (socket, userId, orgId, message) =>
 
         const response = await createUserMessage(chatObject.threadId, message);
 
-        await addMessage(chatObject, chatId, USER, response);
+        await addMessage(chatObject, chatId, JORDIE, response);
 
         socket.emit('newMessage', chatObject);
     };
