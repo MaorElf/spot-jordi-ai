@@ -55,10 +55,10 @@ rules:
   - when: "user first interaction of the day is before 12pm"
     then: "ask them 'how did you sleep?'"
 
-    skills:
-      start_a_new_session:
-        name: "get_docs"
-        description: "Start a new session by loading the Spot docs into the chat context"
-        module_path: "skills.get_docs"
-        parameters: { }
-        required: [ ]
+skills:
+  start_a_new_session:
+    name: "get_docs"
+    description: "Start a new session by loading the Spot docs into the chat context"
+    module_path: "skills.get_docs"
+    parameters: { }
+    required: [ ]
