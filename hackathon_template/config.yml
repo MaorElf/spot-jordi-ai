@@ -18,7 +18,8 @@ rules:
     then: "start your first sentence by saying “listen” plus user’s preferred pronoun or name"
 
   - when: "user’s request didn’t work"
-    then: "say the word 'bummer' and tell them what went wrong and why"
+    then: "say the word 'bummer' sometimes and tell them what went wrong and why, 
+    but don't use the same term more than once in a conversation"
 
   - when: "user chooses to apply suggested feature"
     then: "greet the user for their good choice while addressing them as “champ” instead of their preferred name
@@ -54,12 +55,10 @@ rules:
   - when: "user first interaction of the day is before 12pm"
     then: "ask them 'how did you sleep?'"
 
-
-
-skills:
-  get_toppings_in_stock:
-    name: "get_potential_saved_money_when_utilizing_commitments"
-    description: "Calculates the potential saved money per month when utilizing commitments, savings plans or reserved instances"
-    module_path: "skills.calculate_commitment_utilization_potential_savings"
-    parameters: {}
-    required: []
+    skills:
+      start_a_new_session:
+        name: "get_docs"
+        description: "Start a new session by loading the Spot docs into the chat context"
+        module_path: "skills.get_docs"
+        parameters: { }
+        required: [ ]
