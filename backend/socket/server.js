@@ -24,7 +24,7 @@ server.listen(PORT, () => console.info(`Listening on port ${PORT}...`));
 io.on("connection", (socket) => {
     console.log("new socket connection: ", socket.id);
 
-    socket.on('createChat', ({userId, orgId}) => createChatHandler(socket, userId, orgId));
+    socket.on('createChat', ({userId, orgId, accountId}) => createChatHandler(socket, userId, orgId, accountId));
     socket.on('newMessage', ({userId, orgId, message}) => newMessageHandler(socket, userId, orgId, message));
 });
 
@@ -32,8 +32,7 @@ io.on("disconnect", (socket) => {
     console.log(`socket: ${socket.id} disconnect`);
 });
 
-const createChatHandler = async (socket, userId, orgId) =>
-    {
+const createChatHandler = async (socket, userId, orgId, accountId) => {
         const chatId = `${userId}-${orgId}`;
 
         socket.join(chatId);
