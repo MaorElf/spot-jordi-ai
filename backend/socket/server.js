@@ -46,8 +46,10 @@ const createChatHandler = async (socket, userId, orgId, accountId) => {
                 messages: [],
                 threadId
             }
-
-            await addMessage(chatObject, chatId, JORDI, `welcome ${chatId}!`);
+            
+            const messageId = await createUserMessage(chatObject.threadId, "Hi!");
+            const jordiMessage = await createAgentReaction(messageId, chatObject.threadId);
+            await addMessage(chatObject, chatId, JORDI, jordiMessage);
         }
 
         socket.emit('createChat', chatObject);
