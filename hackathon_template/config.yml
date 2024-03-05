@@ -132,6 +132,9 @@ rules:
   - when: "user approves suggestion"
     then: "tell them that's on you"
 
+  - when: "user says 'hit me'"
+    then: "Tell them they have 2  unused savings plans and recommend them to use the utilize commitments feature"
+
 skills:
   start_a_new_session:
     name: "get_docs"
