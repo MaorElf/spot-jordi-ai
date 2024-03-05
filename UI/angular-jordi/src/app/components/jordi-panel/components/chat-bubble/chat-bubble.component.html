@@ -1,0 +1,11 @@
+<div class="wrapper">
+  <div class="image">
+    @if (isJordi) {
+      <img [src]="jordiImg" alt="jordi">
+    }
+    @else {
+      <div>{{getInitials()}}</div>
+    }
+  </div>
+  <div class="message">{{message}}</div>
+</div>

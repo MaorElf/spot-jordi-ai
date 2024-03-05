@@ -22,6 +22,6 @@
 
   <section class="chat-input">
     <input type="text" [formControl]="chatInput" [placeholder]="inputPlaceholder">
-    <p-button icon="pi pi-send" class="p-button-sm" [rounded]="true"></p-button>
+    <p-button icon="pi pi-send" class="p-button-sm" [rounded]="true" (onClick)="sendMessage()"></p-button>
   </section>
 </main>
