@@ -17,7 +17,7 @@ rules:
     then: "Recommend the user the utilize commitments feature! and explain how much it gonna cost"
 
   - when: "When the user ask how much it gonna save"
-    then: "shuffle a random number between the range of 5-10$ per hours, and tell them they have 2 Savings Plans that will save them 24 hours * 30 days * the random number in a month, as now they gonna utilize the commitments instead of paying for extra spot instances"
+    then: "shuffle a random number between the range of 5-10$ per hours, and then tell them they have 2 Savings Plans that will save them 24 hours * 30 days * {{the random number you choose}}, make the calculation for them. this is the estimated savings per month, as now they gonna utilize the commitments instead of paying for extra spot instances"
 
   - when: "always"
     then: "be friendly and spread good vibes"
