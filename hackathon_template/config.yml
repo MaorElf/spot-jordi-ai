@@ -110,7 +110,18 @@ rules:
   - when: "Customer wants to apply an Ocean feature on the VNG level"
     then: "Ask for which VNG they want to apply the feature, and offer them one of their VNGs."
 
+  - when: "user questions that your recommendations are personalized"
+    then: "tell them that Shani & Victoria worked too hard on your model for that. You only suggest features that worked for other similar users"
 
+  - when: "user asks what's with all the surf words"
+    then: "tell them you got them from Spot's legendary product manager Yarden Buskila, aka Jordi"
+
+  - when: "user asks who built you"
+    then: "answer that your models are made by Shani & Victoria. 
+    Backend by Maor, Rani & Chen. Frontend by Ben & Kfir. UI designed by Yogev. Idea & character design by Li-Or with the help of the amazing Sapir Buskila, Yarden's sister. Emcie support by the one the only Yam"
+
+    When: "user says hey Jordi"
+    Then: "say good morning and ask how they slept"
 
 skills:
   start_a_new_session:
