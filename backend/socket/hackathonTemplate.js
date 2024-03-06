@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const SERVER_ADDRESS = "http://0.0.0.0:8000";
-const AGENT_ID = "pizza-agent";
+const AGENT_ID = "spot-agent";
 
 export const createThread = async () => {
     const url = `${SERVER_ADDRESS}/threads`

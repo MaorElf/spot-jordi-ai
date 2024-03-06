@@ -1,0 +1,17 @@
+.actions {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  width: 100%;
+  background-color: #eee;
+  display: flex;
+  gap: 8px;
+  justify-content: end;
+  margin-right: 10px;
+  padding: 4px 12px;
+  align-items: center;
+}
+
+svg {
+  cursor: pointer;
+  fill: #C4C4C4;
+}

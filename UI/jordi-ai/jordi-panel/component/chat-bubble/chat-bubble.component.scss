@@ -1,0 +1,39 @@
+:host {
+
+  width: 100%;
+
+  .message {
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+    scroll-snap-align: end;
+
+    &-big {
+      font-size: 14px;
+    }
+  }
+  .wrapper {
+
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: 1px solid #C4C4C4;
+    background: #FFF;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.06);
+
+    &.user-bubble {
+      background: linear-gradient(123.51deg, #1A8AFF -3.67%, #26A3FF 42.19%);
+      color: #fff
+    }
+  }
+
+  .image {
+    padding-top: 8px;
+  }
+
+}
+
+.user-message {
+  flex-direction: row-reverse;
+  margin: 0 0 0 auto;
+}
+

@@ -18,7 +18,7 @@ const io = new SocketServer(server, {
     }
 });
 
-const PORT = 5000;
+const PORT = 7321;
 server.listen(PORT, () => console.info(`Listening on port ${PORT}...`));
 
 io.on("connection", (socket) => {

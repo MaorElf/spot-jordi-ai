@@ -1,0 +1,11 @@
+<ng-container *ngTemplateOutlet="shouldFade ? fade : normal"></ng-container>
+
+<ng-template #fade>
+    <span *ngFor="let word of words" class="fade">
+        {{ word }}
+    </span>
+</ng-template>
+
+<ng-template #normal>
+    <span>{{ line }}</span>
+</ng-template>

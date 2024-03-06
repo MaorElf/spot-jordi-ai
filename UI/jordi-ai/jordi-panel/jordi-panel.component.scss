@@ -1,0 +1,222 @@
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://s3.amazonaws.com/spotinst-public/assets/console/fonts/Poppins-Regular.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Poppins bold'), local('Poppins-bold'), url('https://s3.amazonaws.com/spotinst-public/assets/console/fonts/Poppins-Bold.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Poppins semi-bold'), local('Poppins-semi-bold'), url('https://s3.amazonaws.com/spotinst-public/assets/console/fonts/Poppins-SemiBold.ttf') format("truetype");
+}
+
+:host {
+  font-family: 'Poppins';
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 1000;
+  max-width: 600px;
+
+  .wrapper {
+    min-width: 350px;
+    width: 380px;
+    max-width: 100%;
+    resize: horizontal;
+    overflow: auto;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top: 1px solid #E2E2E2;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+
+    /* Popup */
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.30);
+
+    #jordi-char {
+      width:1000px;
+      height: 700px;
+      position: absolute;
+    }
+
+    .util-action {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .close-btn {
+        cursor: pointer;
+      }
+    }
+
+    .header {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+
+
+      .title {
+        color: #4A4A4A;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px; /* 111.111% */
+      }
+    }
+
+    .context {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+
+    .chat {
+      padding: 8px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      border: 1px solid #C4C4C4;
+      background-color: #EEE;
+      font-size: 12px;
+      overflow-y: hidden;
+
+      &-section {
+        min-height: 350px;
+        max-height: 450px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        overflow-y: auto;
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
+      }
+
+      &-last-message-only {
+        padding: unset;
+        min-height: unset;
+        border: unset;
+        background-color: unset;
+        .chat-section {
+          min-height: unset;
+        }
+      }
+    }
+
+    .chat-input {
+      display: flex;
+      flex-direction: row;
+      padding-right: 0;
+      border: #fafafa;
+      position: relative;
+
+      .recording {
+        color: rgb(238, 76, 76);
+        animation: record 1.5s ease infinite;
+        position: absolute;
+        bottom: 1rem;
+        left: 100px;
+        z-index: 10;
+      }
+
+      @keyframes record {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+
+        100% {
+          opacity: 0;
+        }
+
+        50% {
+          opacity: 0.5;
+        }
+        0% {
+          opacity: 1;
+        }
+
+      }
+
+      textarea {
+        min-height: 50px;
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+        width: 100%;
+        padding-left: 10px;
+
+        &.record {
+          padding: 1px;
+          border: 1px solid red;
+        }
+
+        &::placeholder {
+          color: #C4C4C4;
+          width: 80%;
+          white-space: break-spaces;
+          position: absolute;
+          left: 10px;
+          top: 10px;
+          font-size: 12px;
+        }
+      }
+
+      p-button {
+        position: absolute;
+        right: 8px;
+        bottom: 8px;
+
+        ::ng-deep button {
+          height: 2rem;
+          width: 2rem;
+          border-radius: 50%;
+        }
+      }
+
+      p-button.microphone {
+        position: absolute;
+        right: 44px;
+        bottom: 12px;
+
+        ::ng-deep button {
+          height: 24px;
+          width: 24px;
+          border-radius: 50%;
+        }
+      }
+
+      mat-spinner {
+        height: 20px !important;
+        width: 20px !important;
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+      }
+    }
+  }
+}
+.send-button {
+  border: unset;
+  background-color: transparent;
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+}
+.chat-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}

@@ -1,0 +1,31 @@
+:host {
+  isolation: isolate;
+}
+button {
+  font-weight: 500;
+  position: relative;
+  border: none;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 4px 8px;
+  height: 30px;
+  cursor: pointer;
+  font-family: inherit;
+
+  &::before {
+    content: "";
+    inset: -1px;
+    border-radius: 9px;
+    position: absolute;
+    background: linear-gradient(114.77deg, #FF00CE -4.17%, #26A3FF 87.21%) !important;
+    z-index: -1;
+  }
+}
+
+.positive {
+  color: #52A8FF
+}
+
+.negative {
+  color: #FF5252
+}
