@@ -29,7 +29,7 @@ class AppComponent implements OnInit, OnDestroy {
 
     public polledVersion$: Subscription;
 
-    public shouldShowJordi: boolean;
+    public shouldShowJordi: boolean = false;
 
     constructor(private translate: TranslateService,
                 @Inject(HEADER_COMMUNICATION_PROVIDER_TOKEN)

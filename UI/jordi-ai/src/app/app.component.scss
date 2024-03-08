@@ -9,3 +9,67 @@
     margin-left: 220px;
     width:       calc(100% - 220px);
 }
+
+spt-jordi-panel {
+  &.scale-in {
+    transform-origin: bottom left;
+    animation: scaling-in .75s;
+    opacity: 1;
+    height: auto;
+  }
+
+  &.scale-out {
+    transform-origin: bottom left;
+    animation: scaling-out 1.75s;
+    opacity: 0;
+    height: 0;
+  }
+}
+
+.toggle-jordi {
+  border: none;
+  background-color: transparent;
+  position: fixed;
+  bottom: 4px;
+  left: 4px;
+  z-index: 900;
+  cursor: pointer;
+
+  &::before {
+    content: "1";
+    font-family: 'Poppins';
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 28px;
+    right: 30px;
+    width: 17px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: red;
+  }
+}
+
+@keyframes scaling-in {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scaling-out {
+  from {
+    transform: scale(1);
+    opacity: 1;
+    height: auto;
+  }
+  to {
+    transform: scale(0);
+    opacity: 0;
+    height: 0;
+  }
+}
