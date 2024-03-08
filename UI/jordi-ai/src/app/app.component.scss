@@ -1,0 +1,11 @@
+@import "src/styles/styles.scss";
+@import "@spotinst/spot-client-shared/src/styles/main.scss";
+
+:host {
+  font-family: Assistant, sans-serif;
+}
+
+.main-view {
+    margin-left: 220px;
+    width:       calc(100% - 220px);
+}

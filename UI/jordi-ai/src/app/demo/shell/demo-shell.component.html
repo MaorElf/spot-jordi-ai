@@ -1,0 +1,11 @@
+<spt-demo-header [isLoggedIn]="isLoggedIn$ | async"
+                 [userName]="userName$ | async"
+                 (logIn)="login()"
+                 (logOut)="logout()">
+</spt-demo-header>
+
+<br>
+<br>
+<br>
+
+<router-outlet></router-outlet>

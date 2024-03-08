@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Demo</h1>
+  <div *ngIf="isLoggedIn">
+    {{'demo.welcome' | translate}}, {{userName}}!
+  </div>
+  
+  <button *ngIf="isLoggedIn; else loggedOut" mat-button color="primary" (click)="requestLogOut()">Logout</button>
+  
+  <ng-template #loggedOut>
+    <button mat-button color="primary" (click)="requestLogIn()">Login</button>
+  </ng-template>
+</div>

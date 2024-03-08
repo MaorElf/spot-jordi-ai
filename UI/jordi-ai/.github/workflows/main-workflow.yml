@@ -1,0 +1,8 @@
+on:
+  pull_request:
+    branches: [develop, main, master]
+
+jobs:
+  call-verification-workflow:
+    uses: spotinst/devops-scripts/.github/workflows/javascript-verification-workflow.yml@master
+    secrets: inherit

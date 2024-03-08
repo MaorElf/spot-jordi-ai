@@ -1,0 +1,151 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "spot-jordi-ai": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "changeDetection": "OnPush",
+          "style": "scss"
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-builders/custom-webpack:browser",
+          "options": {
+            "outputPath": "build",
+            "index": "src/index.html",
+            "main": "src/bootstrap-spa.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "config/tsconfig.single-spa.json",
+            "aot": true,
+            "allowedCommonJsDependencies": [
+              "lodash",
+              "single-spa-angular/internals",
+              "!!../node_modules/css-loader/dist/cjs.js??ref--14-1!../node_modules/postcss-loader/src/index.js??extracted!../node_modules/resolve-url-loader/index.js??ref--14-3!../node_modules/sass-loader/dist/cjs.js??ref--14-4!./styles.scss"
+            ],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets/i18n",
+              "src/assets/icons",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@spotinst/spot-client-shared/src/assets/",
+                "output": "/assets/"
+              }
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+               "./node_modules"
+              ]
+            },
+            "scripts": [],
+            "customWebpackConfig": {
+              "path": "config/library.webpack-config.js",
+              "libraryName": "spot-jordi-ai",
+              "libraryTarget": "system"
+            },
+            "sourceMap": {
+              "vendor": true,
+              "scripts": true
+            },
+            "optimization": false
+          },
+          "configurations": {
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            },
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                },
+                {
+                  "replace": "src/app/build-specifics/index.ts",
+                  "with": "src/app/build-specifics/index.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-builders/custom-webpack:dev-server",
+          "options": {
+            "browserTarget": "spot-jordi-ai:build",
+            "proxyConfig": "config/proxy.config.js",
+            "port": 5005,
+            "servePath": "/jordiApp"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "spot-jordi-ai:build:production"
+            },
+            "development": {
+              "browserTarget": "spot-jordi-ai:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "spot-jordi-ai:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-builders/custom-webpack:karma",
+          "options": {
+            "customWebpackConfig": {
+              "path": "config/library.webpack-config.js"
+            },
+            "codeCoverage": true,
+            "polyfills": ["zone.js", "zone.js/testing"],
+            "tsConfig": "config/tsconfig.spec.json",
+            "karmaConfig": "config/karma.conf.js",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@spotinst/spot-client-shared/src/assets/",
+                "output": "/assets/"
+              }
+            ],
+            "styles": [],
+            "scripts": []
+          }
+        }
+      }
+    }
+  }
+}

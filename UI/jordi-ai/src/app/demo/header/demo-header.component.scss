@@ -1,0 +1,16 @@
+@import "@spotinst/spot-client-shared/src/styles/vars";
+
+:host {
+  display: block;
+  height: 120px;
+  background-color: $spot-blue-10;
+  border-bottom-color: $spot-dark-grey;
+  border-bottom-style: dashed;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
