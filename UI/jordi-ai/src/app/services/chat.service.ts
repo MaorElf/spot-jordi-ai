@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Observable} from "rxjs";
 import {io} from "socket.io-client";
-import {ChatMessage, SOCKET_EVENT, SocketEvent} from "./jordi.type";
+import {ChatMessage, SOCKET_EVENT, SocketEvent} from "../types/jordi.type";
 import {isString} from "lodash";
 
 @Injectable({

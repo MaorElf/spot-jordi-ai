@@ -1,4 +1,4 @@
-import {ChatMessage} from '../../jordi.type';
+import {ChatMessage} from '../../src/app/services/jordi.type';
 
 export const mockMessages: ChatMessage[]  = [
     {

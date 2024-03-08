@@ -14,7 +14,6 @@ import {NOTIFICATION_PROVIDER_TOKEN} from './notification.provider.token';
 import {HEADER_COMMUNICATION_PROVIDER_TOKEN} from './header-communication-provider.token';
 import {LOGGER_PROVIDER_TOKEN} from './logger-provider.token';
 import {CAPABILITIES_PROVIDER_TOKEN} from './capabilities.provider.token';
-import {ORGANIZATION_PROVIDER_TOKEN} from "./organization-provider.token";
 
 @NgModule({
     providers: [

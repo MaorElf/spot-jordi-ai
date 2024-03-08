@@ -5,7 +5,7 @@ import {
     OnInit,
     Output
 } from '@angular/core';
-import {ChatMessage, Source, User} from '../../../jordi.type';
+import {ChatMessage, Source, User} from '../../../../types/jordi.type';
 import {ChatLineComponent} from '../../../chat-line.component/chat-line.component';
 import {NgIf, JsonPipe, NgClass} from '@angular/common';
 import {AvatarModule} from 'primeng/avatar';

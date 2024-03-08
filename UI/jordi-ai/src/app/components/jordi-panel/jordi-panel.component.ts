@@ -14,13 +14,10 @@ import {NgForOf, AsyncPipe, NgIf, NgClass} from '@angular/common';
 import {
     ChatBubbleComponent
 } from './component/chat-bubble/chat-bubble.component';
-import {Account, LocalStorageService} from '@spotinst/spot-client-shared';
-import {ChatMessage, SOCKET_EVENT, Source, User, UserCookie} from '../jordi.type';
-import {ChatService} from '../chat.service';
+import {Account, LocalStorageService, SCS_ORGANIZATION_PROVIDER_TOKEN} from '@spotinst/spot-client-shared';
+import {ChatMessage, SOCKET_EVENT, Source, User, UserCookie} from '../../types/jordi.type';
+import {ChatService} from '../../services/chat.service';
 import {combineLatest, interval, Observable, of} from 'rxjs';
-import {
-    ORGANIZATION_PROVIDER_TOKEN
-} from '../../app/client-core-services-integration/organization-provider.token';
 import {map, startWith, switchMap, take, tap} from 'rxjs/operators';
 import {InputTextareaModule} from 'primeng/inputtextarea';
 import {MatIconModule} from '@angular/material/icon';
@@ -31,7 +28,7 @@ import {
 } from '../chat-header.component/chat-header.component';
 import {JordiThreeDComponent} from './component/jordi-three-d/jordi-three-d.component';
 import {AudioRecorderService} from './audio-recorder.service';
-import {AUTH_PROVIDER_TOKEN} from '../../app/client-core-services-integration/auth-provider.token';
+import {AUTH_PROVIDER_TOKEN} from '../../client-cores-services-integration/auth-provider.token';
 import {
     Organization
 } from '@spotinst/spot-client-core-services-types/app/services/organization/models/organization.model';
@@ -85,7 +82,7 @@ class JordiPanelComponent implements OnInit, AfterViewInit {
 
   private chatService: ChatService = inject(ChatService);
 
-  private organizationProvider = inject(ORGANIZATION_PROVIDER_TOKEN);
+  private organizationProvider = inject(SCS_ORGANIZATION_PROVIDER_TOKEN);
 
   private currentAccount$ = inject(AUTH_PROVIDER_TOKEN).currentAccount$
 
