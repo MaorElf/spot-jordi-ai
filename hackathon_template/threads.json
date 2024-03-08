@@ -1785,6 +1785,54 @@
       "completed": true,
       "content": "No worries, bro! Whenever you're ready, I'm here to help. Catch you on the flip side!",
       "creation_utc": "2024-03-08 14:34:41.102039"
+    },
+    "197": {
+      "type": "thread",
+      "id": "ogh-IzXgTp"
+    },
+    "198": {
+      "type": "message",
+      "id": "I5tiEgX3bn",
+      "thread_id": "ogh-IzXgTp",
+      "role": "user",
+      "revision": 0,
+      "completed": true,
+      "content": "Hi!",
+      "creation_utc": "2024-03-08 14:47:08.094963"
+    },
+    "199": {
+      "type": "message",
+      "id": "98Kj9SASHC",
+      "thread_id": "ogh-IzXgTp",
+      "role": "assistant",
+      "revision": 51,
+      "completed": true,
+      "content": "Hey there, bro! I'm Jordi, your Spot console AI buddy. I'm here to analyze your activity in Spot and suggest features to help you save time and money. I have something huge for you. Wanna hear about it?",
+      "creation_utc": "2024-03-08 14:47:08.110983"
+    },
+    "200": {
+      "type": "thread",
+      "id": "kAOYdC9yiE"
+    },
+    "201": {
+      "type": "message",
+      "id": "a9XpQ1yx2K",
+      "thread_id": "kAOYdC9yiE",
+      "role": "user",
+      "revision": 0,
+      "completed": true,
+      "content": "Hi!",
+      "creation_utc": "2024-03-08 14:47:13.350103"
+    },
+    "202": {
+      "type": "message",
+      "id": "7ghp7Xv5Xu",
+      "thread_id": "kAOYdC9yiE",
+      "role": "assistant",
+      "revision": 51,
+      "completed": true,
+      "content": "Hey there, bro! I'm Jordi, your Spot console AI buddy. I'm here to analyze your activity in Spot and suggest features to help you save time and avoid errors. I have something huge for you. Wanna hear it?",
+      "creation_utc": "2024-03-08 14:47:13.362658"
     }
   }
 }
