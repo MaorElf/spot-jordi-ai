@@ -1,0 +1,17 @@
+<div class="center-wrap">
+  <div>
+    <button mat-flat-button [color]="(isLoggedIn$ | async) ? 'primary' : 'warn'" routerLink="./secret">
+      {{secretFeatureButtonLabel$ | async}}
+    </button>
+    <button mat-flat-button color="primary" (click)="oops()">Throw an exception</button>
+  </div>
+  <br>
+  <div class="for-single-spa-env">
+    <h2>{{title}}</h2>
+    <br>
+    <button mat-flat-button color="primary" [disabled]="(isLoggedIn$ | async) === false" routerLink="./cross-mfe-routing-tests">
+      test cross-microfrontend routing
+      <span *ngIf="(isLoggedIn$ | async) === false">(you must log in first)</span>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+{
+  "demo": {
+    "welcome": "Welcome",
+    "title": "if you're running in the single-spa environment: "
+  }
+}

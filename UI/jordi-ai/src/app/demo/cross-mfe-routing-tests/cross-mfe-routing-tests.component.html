@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="links-container">
+    <span>
+    ✅ <a mat-button routerLink="/spt/settings/account/general" color="primary">/spt/settings/account/general</a>
+      <span> this should work (route exists in main "spt" app)</span>
+    </span>
+    
+    <span>
+    ❌ <a mat-button routerLink="/spt/kuku" color="primary">/spt/kuku</a>
+    this should redirect to spt/dashboard (because "/spt/kuku" route does not exist in main "spt" app)
+    </span>
+    
+    <span>
+    ✅ <a mat-button routerLink="/newAppPrefix/demo" color="primary">/newAppPrefix/demo</a>
+    this should work if you replace "newAppPrefix" with the correct prefix (route exists in this app)
+    </span>
+    
+    <span>
+    ✅ <a mat-button routerLink="../" color="primary">../</a>
+    this should work (goes to parent route)
+    </span>
+    
+    <span>
+    ❌ <a mat-button routerLink="../../kuku" color="primary">../../kuku</a>
+    this should redirect to spt/dashboard (because the given route does not exist in this app)
+    </span>
+    
+    <span>
+    ❌ <a mat-button routerLink="kuku" color="primary">kuku</a>
+    this should redirect to spt/dashboard (because the given route does not exist in this app)
+    </span>
+  </div>
+  
+  <br>
+  <br>
+  
+  <button mat-button mat-flat-button routerLink="../" color="primary">back</button>
+
+</div>
